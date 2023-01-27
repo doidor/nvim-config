@@ -57,5 +57,6 @@ return require('packer').startup(function(use)
     use("eandrju/cellular-automaton.nvim")
 
     use("tpope/vim-surround")
+    use("tpope/vim-commentary")
     use('prettier/vim-prettier')
 end)
