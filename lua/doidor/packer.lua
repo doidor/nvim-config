@@ -20,14 +20,16 @@ return require('packer').startup(function(use)
 
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable 'make' == 1 }
 
-  use({
-    'rose-pine/neovim',
-    as = 'rose-pine',
-    config = function()
-      require("rose-pine").setup()
-      vim.cmd.colorscheme('rose-pine')
-    end
-  })
+  -- use({
+  --   'rose-pine/neovim',
+  --   as = 'rose-pine',
+  --   config = function()
+  --     require("rose-pine").setup()
+  --     vim.cmd.colorscheme('rose-pine')
+  --   end
+  -- })
+
+  use { "catppuccin/nvim", as = "catppuccin" }
 
   use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
   use('nvim-treesitter/playground')
@@ -65,4 +67,6 @@ return require('packer').startup(function(use)
   use("tpope/vim-surround")
   use("tpope/vim-commentary")
   use('prettier/vim-prettier')
+
+  use("RRethy/vim-illuminate")
 end)
