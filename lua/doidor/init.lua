@@ -29,11 +29,6 @@ autocmd({"BufWritePre"}, {
     command = [[%s/\s\+$//e]],
 })
 
-autocmd("VimEnter", {
-    group = doidorGroup,
-    pattern = "*",
-    command = "NERDTree | wincmd p"
-})
 
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
